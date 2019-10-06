@@ -81,11 +81,11 @@ public class select_groups extends AppCompatActivity {
                         if(dataSnapshot.hasChildren()){
                             int i = ((Long) dataSnapshot.child("num").getValue()).intValue();
                             mDatabase.child("Notifications").child("num").setValue(i+1);
-                            mDatabase.child("Notifications").child("n"+i+1).child("sender").setValue(add_user);
+                            mDatabase.child("Notifications").child("n"+(i+1)).child("sender").setValue(add_user);
                             Date currentTime = Calendar.getInstance().getTime();
-                            mDatabase.child("Notifications").child("n"+i+1).child("time").setValue(currentTime);
+                            mDatabase.child("Notifications").child("n"+(i+1)).child("time").setValue(currentTime);
                             for(int j=0;j<selected_groups.size();j++){
-                                mDatabase.child("Notifications").child("n"+i+1).child("groups").child(selected_groups.get(j)).setValue(selected_members.get(j));
+                                mDatabase.child("Notifications").child("n"+(i+1)).child("groups").child(selected_groups.get(j)).setValue(selected_members.get(j));
                             }
                         }
                         else{
