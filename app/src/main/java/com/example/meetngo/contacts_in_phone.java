@@ -1,6 +1,5 @@
 package com.example.meetngo;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentResolver;
@@ -9,21 +8,16 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -137,7 +131,7 @@ public class contacts_in_phone extends AppCompatActivity {
             mDatabase = FirebaseDatabase.getInstance().getReference();
             final Intent i1 = new Intent(this, contacts_in_group.class);
             i1.putExtra("group_name", gn);
-            Button confirm = findViewById(R.id.confirm);
+            Button confirm = findViewById(R.id.next);
             confirm.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

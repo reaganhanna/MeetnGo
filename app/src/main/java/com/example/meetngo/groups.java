@@ -10,6 +10,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -92,6 +93,15 @@ public class groups extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(i1);
+            }
+        });
+
+        final Intent i2 = new Intent(this, select_groups.class);
+        Button next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(i2);
             }
         });
     }

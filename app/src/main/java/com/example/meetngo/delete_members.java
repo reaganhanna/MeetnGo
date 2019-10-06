@@ -68,7 +68,7 @@ public class delete_members extends AppCompatActivity {
                 selected_contacts.add(arrayList.get(i));
             }
         });
-        Button confirm = findViewById(R.id.confirm);
+        Button confirm = findViewById(R.id.next);
         final Intent i3 = new Intent(this, contacts_in_group.class);
         i3.putExtra("group_name", g_name);
         confirm.setOnClickListener(new View.OnClickListener() {
