@@ -101,7 +101,12 @@ public class groups extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(i2);
+                if(!arrayList.get(0).equals("You don't have any groups yet!")) {
+                    startActivity(i2);
+                }
+                else{
+                    Toast.makeText(groups.this, "Please create a group first!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
